@@ -34,6 +34,7 @@
 		187F50A829891DE2009F9F93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187F50A729891DE0009F9F93 /* GoogleService-Info.plist */; };
 		187F50AB298923F5009F9F93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F50AA298923F5009F9F93 /* StoreKit.framework */; };
 		187F50AE298925B5009F9F93 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = 187F50AD298925B5009F9F93 /* ReceiptParser */; };
+		18820FA02989A14E00756E55 /* User:Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18820F9F2989A14E00756E55 /* User:Blog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		18606E9D2988C5C000F43EFB /* UploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadManager.swift; sourceTree = "<group>"; };
 		187F50A729891DE0009F9F93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		187F50AA298923F5009F9F93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		18820F9F2989A14E00756E55 /* User:Blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User:Blog.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		18606E8A2988C24B00F43EFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18820F9F2989A14E00756E55 /* User:Blog.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				18606E9A2988C58500F43EFB /* BackEndFirebaseManager.swift in Sources */,
 				18606E762988BF0F00F43EFB /* ViewController.swift in Sources */,
 				18606E9E2988C5C000F43EFB /* UploadManager.swift in Sources */,
+				18820FA02989A14E00756E55 /* User:Blog.swift in Sources */,
 				18606E8E2988C44F00F43EFB /* ProfileViewController.swift in Sources */,
 				18606E722988BF0F00F43EFB /* AppDelegate.swift in Sources */,
 				18606E742988BF0F00F43EFB /* SceneDelegate.swift in Sources */,

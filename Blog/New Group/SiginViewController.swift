@@ -11,7 +11,8 @@ class SiginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .brown
+       title = "Signin"
         // Do any additional setup after loading the view.
     }
     
