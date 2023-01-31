@@ -32,6 +32,8 @@
 		187F50A429891C88009F9F93 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 187F50A329891C88009F9F93 /* FirebaseMessaging */; };
 		187F50A629891C88009F9F93 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 187F50A529891C88009F9F93 /* FirebaseStorage */; };
 		187F50A829891DE2009F9F93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187F50A729891DE0009F9F93 /* GoogleService-Info.plist */; };
+		187F50AB298923F5009F9F93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F50AA298923F5009F9F93 /* StoreKit.framework */; };
+		187F50AE298925B5009F9F93 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = 187F50AD298925B5009F9F93 /* ReceiptParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,7 @@
 		18606E9B2988C5A800F43EFB /* AutoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoManager.swift; sourceTree = "<group>"; };
 		18606E9D2988C5C000F43EFB /* UploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadManager.swift; sourceTree = "<group>"; };
 		187F50A729891DE0009F9F93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		187F50AA298923F5009F9F93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187F50AB298923F5009F9F93 /* StoreKit.framework in Frameworks */,
 				187F509C29891C88009F9F93 /* FirebaseDatabase in Frameworks */,
 				187F509E29891C88009F9F93 /* FirebaseFirestore in Frameworks */,
 				187F50A429891C88009F9F93 /* FirebaseMessaging in Frameworks */,
+				187F50AE298925B5009F9F93 /* ReceiptParser in Frameworks */,
 				187F509829891C88009F9F93 /* FirebaseAnalytics in Frameworks */,
 				187F50A029891C88009F9F93 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				187F50A629891C88009F9F93 /* FirebaseStorage in Frameworks */,
@@ -80,6 +85,7 @@
 			children = (
 				18606E702988BF0F00F43EFB /* Blog */,
 				18606E6F2988BF0F00F43EFB /* Products */,
+				187F50A9298923F5009F9F93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +164,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		187F50A9298923F5009F9F93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				187F50AA298923F5009F9F93 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +197,7 @@
 				187F50A129891C88009F9F93 /* FirebaseFirestoreSwift */,
 				187F50A329891C88009F9F93 /* FirebaseMessaging */,
 				187F50A529891C88009F9F93 /* FirebaseStorage */,
+				187F50AD298925B5009F9F93 /* ReceiptParser */,
 			);
 			productName = Blog;
 			productReference = 18606E6E2988BF0F00F43EFB /* Blog.app */;
@@ -214,6 +229,7 @@
 			mainGroup = 18606E652988BF0F00F43EFB;
 			packageReferences = (
 				187F509629891C88009F9F93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				187F50AC298925B5009F9F93 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = 18606E6F2988BF0F00F43EFB /* Products */;
 			projectDirPath = "";
@@ -481,6 +497,14 @@
 				kind = branch;
 			};
 		};
+		187F50AC298925B5009F9F93 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -523,6 +547,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 187F509629891C88009F9F93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		187F50AD298925B5009F9F93 /* ReceiptParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 187F50AC298925B5009F9F93 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = ReceiptParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
