@@ -56,15 +56,57 @@
 		18606E702988BF0F00F43EFB /* Blog */ = {
 			isa = PBXGroup;
 			children = (
-				18606E712988BF0F00F43EFB /* AppDelegate.swift */,
-				18606E732988BF0F00F43EFB /* SceneDelegate.swift */,
-				18606E752988BF0F00F43EFB /* ViewController.swift */,
+				18606E8A2988C24B00F43EFB /* Model */,
+				18606E892988C23900F43EFB /* views */,
+				18606E872988C21B00F43EFB /* Controllers */,
+				18606E862988C1FD00F43EFB /* other */,
+				18606E852988C1EE00F43EFB /* Managers */,
 				18606E772988BF0F00F43EFB /* Main.storyboard */,
 				18606E7A2988BF1500F43EFB /* Assets.xcassets */,
 				18606E7C2988BF1500F43EFB /* LaunchScreen.storyboard */,
 				18606E7F2988BF1500F43EFB /* Info.plist */,
 			);
 			path = Blog;
+			sourceTree = "<group>";
+		};
+		18606E852988C1EE00F43EFB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		18606E862988C1FD00F43EFB /* other */ = {
+			isa = PBXGroup;
+			children = (
+				18606E712988BF0F00F43EFB /* AppDelegate.swift */,
+				18606E732988BF0F00F43EFB /* SceneDelegate.swift */,
+			);
+			name = other;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		18606E872988C21B00F43EFB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18606E752988BF0F00F43EFB /* ViewController.swift */,
+			);
+			name = Controllers;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		18606E892988C23900F43EFB /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		18606E8A2988C24B00F43EFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +334,6 @@
 				INFOPLIST_FILE = Blog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +361,6 @@
 				INFOPLIST_FILE = Blog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
