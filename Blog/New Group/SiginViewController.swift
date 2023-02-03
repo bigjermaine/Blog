@@ -4,27 +4,34 @@
 //
 //  Created by Apple on 31/01/2023.
 //
-
+import StoreKit
 import UIKit
+import RevenueCat
+import Foundation
+
+
 
 class SiginViewController: UIViewController {
-
+    private let headerview = HeaderView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown
        title = "Signin"
-        // Do any additional setup after loading the view.
+        DispatchQueue.main.asyncAfter(deadline: .now()+3){
+            if !iappmanager.Shared.ispremium() {
+                let vc = PaywallViewController()
+                let navc = UINavigationController(rootViewController: vc)
+                navc.modalPresentationStyle = .overFullScreen
+                self.present(navc, animated: true,completion: nil)
+            }
+        }
+        view.addSubview(headerview)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        headerview.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.frame.width, height: view.frame.height/4)
     }
-    */
 
 }
