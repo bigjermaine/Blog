@@ -11,7 +11,7 @@ struct User {
     
     let name:String
     let email:String
-    let profileurl:URL?
+    let profile_url:URL?
 }
 
 struct Blog {

@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //5439e80eedf54f5b990ddcf167e715a6
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       // Messaging.messaging().autoInitEnabled = true
         FirebaseApp.configure()
         Purchases.configure(withAPIKey:"appl_NwXCklLvpgjhLlHhDuuZTPJDZCs")
         //iappmanager.Shared.getsubcriptionstatus(completion: nil)
