@@ -56,7 +56,7 @@ private let database = Firestore.firestore()
         let ref = email.replacingOccurrences(of: ".", with: "_")
             .replacingOccurrences(of: "@", with: ".")
             database.collection("users")
-            .document(email)
+            .document(ref)
             .collection("posts")
             .getDocuments { snapshot, error in
                 guard let documents = snapshot?.documents.compactMap({$0.data()})
@@ -83,6 +83,7 @@ private let database = Firestore.firestore()
                return post
                 })
                 completion(posts)
+                print(posts[0])
            
             }
     }

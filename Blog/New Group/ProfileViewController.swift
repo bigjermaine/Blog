@@ -8,22 +8,22 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    
+    private var posts: [Blog] = []
     var user:User?
     let cuurentemail:String
     
     private let tableview:UITableView = {
-   
+        
         let tableview = UITableView()
-        tableview.backgroundColor = .black
-        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+   
+        tableview.register(PostHeaderTableViewCell.self, forCellReuseIdentifier: PostHeaderTableViewCell.identifier)
         return tableview
         
         
         
         
     }()
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,10 @@ class ProfileViewController: UIViewController {
         view.addSubview(tableview)
         tableview.delegate = self
         tableview.dataSource = self
-      
+    
         fetchprofiledata()
         setupsignoutbutton()
-        fetch()
+        
         
     }
     
@@ -60,7 +60,7 @@ class ProfileViewController: UIViewController {
         
         
         let header = UIView(frame: CGRect(x: 0, y: 0, width:view.frame.width, height:500))
-       
+        
         header.backgroundColor = .systemGreen
         header.clipsToBounds = true
         header.isUserInteractionEnabled = true
@@ -76,8 +76,8 @@ class ProfileViewController: UIViewController {
         headeImage.tintColor = .white
         headeImage.translatesAutoresizingMaskIntoConstraints = false
         headeImage.layer.masksToBounds = true
-       
-   
+        
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(didtap))
         headeImage.addGestureRecognizer(tap)
         header.addSubview(headeImage)
@@ -138,6 +138,18 @@ class ProfileViewController: UIViewController {
     
     ///fetch data from data base assign it to view using the currentmail  a document id from the signup  function to fecth the datas back to view
     private func  fetchprofiledata() {
+     
+         
+                databasemanager.shared.getpost(for: cuurentemail) { [weak self] blog in
+                    self?.posts = blog
+                    DispatchQueue.main.async {
+                        self?.tableview.reloadData()
+                    }
+                    
+                }
+                
+            
+        
         databasemanager.shared.getuser(email: cuurentemail) {[weak self] user in
             guard let user = user else {return}
             self?.user = user
@@ -187,34 +199,31 @@ class ProfileViewController: UIViewController {
     
     
     
-    private var posts: [Blog] = []
     
-    private func fetch() {
-     
-            databasemanager.shared.getpost(for: cuurentemail) { [weak self] blog in
-                self?.posts = blog
-                DispatchQueue.main.async {
-                    self?.tableview.reloadData()
-                }
-                
-            }
-            
-        }
-    }
+}
+    
 
    extension ProfileViewController: UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(posts.count)
         return posts.count
+   
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
-        let cell = tableview.dequeueReusableCell(withIdentifier:"cell", for: indexPath)
-        cell.textLabel?.text = post.text
+        guard  let cell = tableview.dequeueReusableCell(withIdentifier:PostHeaderTableViewCell.identifier, for: indexPath) as? PostHeaderTableViewCell else {
+            
+            fatalError()
+        }
+        cell.configure(with: postpreviewtableviewcellviewmodel(title: post.title, imageurl: post.headerurl))
         return cell
+        
     }
     
-    
+       func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+           return 350
+       }
    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             picker.dismiss(animated: true,completion: nil)

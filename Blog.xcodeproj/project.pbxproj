@@ -26,6 +26,8 @@
 		18606E9C2988C5A800F43EFB /* AutoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18606E9B2988C5A800F43EFB /* AutoManager.swift */; };
 		18606E9E2988C5C000F43EFB /* UploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18606E9D2988C5C000F43EFB /* UploadManager.swift */; };
 		187ADE12298EC090006A3193 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187ADE11298EC090006A3193 /* GoogleService-Info.plist */; };
+		187C69A32996E46B001F4461 /* PostPreviewTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C69A22996E46B001F4461 /* PostPreviewTableTableViewCell.swift */; };
+		187C69A52996E4F3001F4461 /* PostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C69A42996E4F3001F4461 /* PostHeaderTableViewCell.swift */; };
 		187F50AB298923F5009F9F93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F50AA298923F5009F9F93 /* StoreKit.framework */; };
 		18808BAC298CFA8A00E38292 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18808BAB298CFA8A00E38292 /* HeaderView.swift */; };
 		18820FA02989A14E00756E55 /* User:Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18820F9F2989A14E00756E55 /* User:Blog.swift */; };
@@ -65,6 +67,8 @@
 		18606E9B2988C5A800F43EFB /* AutoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoManager.swift; sourceTree = "<group>"; };
 		18606E9D2988C5C000F43EFB /* UploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadManager.swift; sourceTree = "<group>"; };
 		187ADE11298EC090006A3193 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		187C69A22996E46B001F4461 /* PostPreviewTableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreviewTableTableViewCell.swift; sourceTree = "<group>"; };
+		187C69A42996E4F3001F4461 /* PostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		187F50AA298923F5009F9F93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		18808BAB298CFA8A00E38292 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		18820F9F2989A14E00756E55 /* User:Blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User:Blog.swift"; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 			children = (
 				1836B562298AC43B00E55B15 /* PaydescriptiveView.swift */,
 				18808BAB298CFA8A00E38292 /* HeaderView.swift */,
+				187C69A22996E46B001F4461 /* PostPreviewTableTableViewCell.swift */,
+				187C69A42996E4F3001F4461 /* PostHeaderTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -284,11 +290,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18606E9C2988C5A800F43EFB /* AutoManager.swift in Sources */,
+				187C69A32996E46B001F4461 /* PostPreviewTableTableViewCell.swift in Sources */,
 				18606E8C2988C42800F43EFB /* TabbarViewController.swift in Sources */,
 				18606E922988C4A400F43EFB /* SiginViewController.swift in Sources */,
 				18606E982988C56B00F43EFB /* InappManager.swift in Sources */,
 				18606E962988C51000F43EFB /* CreateViewController.swift in Sources */,
 				18606E942988C4C100F43EFB /* SignupViewController.swift in Sources */,
+				187C69A52996E4F3001F4461 /* PostHeaderTableViewCell.swift in Sources */,
 				18808BAC298CFA8A00E38292 /* HeaderView.swift in Sources */,
 				18606E9A2988C58500F43EFB /* BackEndFirebaseManager.swift in Sources */,
 				18606E762988BF0F00F43EFB /* ViewController.swift in Sources */,

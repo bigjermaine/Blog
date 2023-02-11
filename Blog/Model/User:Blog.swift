@@ -12,6 +12,11 @@ struct User {
     let name:String
     let email:String
     let profile_url:URL?
+    init(name: String, email: String, profile_url: URL?) {
+        self.name = name
+        self.email = email
+        self.profile_url = profile_url
+    }
 }
 
 struct Blog {
@@ -20,4 +25,12 @@ struct Blog {
     let date: TimeInterval
     let headerurl:URL?
     let text:String
+    
+    init(identifier: String, title: String, date: TimeInterval, headerurl: URL?, text: String) {
+        self.identifier = identifier
+        self.title = title
+        self.date = date
+        self.headerurl = headerurl
+        self.text = text
+    }
 }
